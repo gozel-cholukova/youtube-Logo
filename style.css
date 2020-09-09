@@ -1,0 +1,39 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  perspective: 550px;
+}
+
+.youtube {
+  width: 300px;
+  height: 200px;
+  margin: 50px auto;
+  position: relative;
+
+  background-color: #f50b0b;
+  border-radius: 50px 50px 50px 50px / 30px 30px 30px 30px;
+
+  box-shadow: 
+      -10px 0 0 #bb0b0b;
+      -40px 0 15px -10px rgba(0,0,0,.15);
+
+  transform: rotateY(30deg);
+}
+
+.youtube::before {
+  content: "";
+  display: block;
+  border-style: solid;
+  border-width: 40px 0 40px 70px;
+  border-color: transparent transparent transparent #fff;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate3d(-50%, -50%, 0)
+}
